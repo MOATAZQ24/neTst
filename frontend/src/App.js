@@ -274,7 +274,7 @@ const LandingPage = ({ onStartQuiz, onViewProgress }) => {
               <div className="p-2 bg-blue-600 rounded-lg">
                 <Network className="h-6 w-6 text-white" />
               </div>
-              <span className="text-xl font-bold">NetworkPrep</span>
+              <span className="text-xl font-bold">neTst</span>
             </div>
             <p className="text-slate-400">
               © 2024 NetworkPrep. Master networking with confidence.
