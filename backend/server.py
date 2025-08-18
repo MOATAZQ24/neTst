@@ -182,7 +182,7 @@ SAMPLE_QUESTIONS = [
 
 @api_router.get("/")
 async def root():
-    return {"message": "CCNA Training Platform API"}
+    return {"message": "neTst - CCNA Training Platform API"}
 
 @api_router.post("/questions/seed")
 async def seed_questions():
