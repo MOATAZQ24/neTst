@@ -439,6 +439,10 @@ const QuizPage = ({ difficulty, onQuizComplete, onBackToHome }) => {
     );
   }
 
+  if (showDisclaimer) {
+    return <DisclaimerModal />;
+  }
+
   if (!quiz) {
     return (
       <div className="min-h-screen bg-slate-50 flex items-center justify-center">
