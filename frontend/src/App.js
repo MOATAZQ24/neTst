@@ -474,6 +474,9 @@ const QuizPage = ({ difficulty, onQuizComplete, onBackToHome }) => {
               <Badge variant="secondary" className="capitalize">
                 {difficulty}
               </Badge>
+              <Badge variant="outline" className="text-xs text-amber-600 border-amber-300">
+                Practice Questions
+              </Badge>
             </div>
             <div className="flex items-center space-x-4">
               <div className="flex items-center space-x-2">
