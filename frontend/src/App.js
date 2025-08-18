@@ -277,6 +277,7 @@ const QuizPage = ({ difficulty, onQuizComplete, onBackToHome }) => {
   const [answers, setAnswers] = useState([]);
   const [timeLeft, setTimeLeft] = useState(600); // 10 minutes
   const [loading, setLoading] = useState(true);
+  const [showDisclaimer, setShowDisclaimer] = useState(true);
 
   useEffect(() => {
     const startQuiz = async () => {
