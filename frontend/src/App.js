@@ -343,6 +343,91 @@ const QuizPage = ({ difficulty, onQuizComplete, onBackToHome }) => {
     return `${mins}:${secs.toString().padStart(2, '0')}`;
   };
 
+  const handleStartQuiz = () => {
+    setShowDisclaimer(false);
+  };
+
+  // Disclaimer Component
+  const DisclaimerModal = () => (
+    <div className="min-h-screen bg-slate-50 flex items-center justify-center p-4">
+      <Card className="max-w-2xl mx-auto">
+        <CardHeader className="text-center">
+          <div className="mx-auto p-3 bg-amber-100 rounded-full w-fit mb-4">
+            <Shield className="h-8 w-8 text-amber-600" />
+          </div>
+          <CardTitle className="text-2xl text-slate-900">Important Notice</CardTitle>
+          <CardDescription className="text-lg">
+            Before starting your CCNA practice quiz
+          </CardDescription>
+        </CardHeader>
+        <CardContent className="space-y-6">
+          <div className="bg-amber-50 border-l-4 border-amber-400 p-4 rounded-r-lg">
+            <div className="flex">
+              <div className="flex-shrink-0">
+                <Badge variant="outline" className="bg-amber-100 text-amber-800 border-amber-300">
+                  ⚠️ Disclaimer
+                </Badge>
+              </div>
+            </div>
+            <div className="mt-3 text-amber-800">
+              <h3 className="font-semibold mb-2">Practice Questions Only</h3>
+              <p className="mb-4">
+                The questions in this quiz are practice-only and are collected from external educational resources, 
+                including sites like <strong>IPCisco.com</strong> and other networking education platforms.
+              </p>
+              <p className="mb-4">
+                <strong>This is NOT the official Cisco exam database.</strong> These questions are designed to help 
+                you practice and understand networking concepts, but they may not reflect the exact format, 
+                difficulty, or content of actual Cisco certification exams.
+              </p>
+            </div>
+          </div>
+
+          <div className="bg-blue-50 border-l-4 border-blue-400 p-4 rounded-r-lg">
+            <div className="text-blue-800">
+              <h3 className="font-semibold mb-2">Question Bank Limitations</h3>
+              <ul className="list-disc list-inside space-y-1 text-sm">
+                <li>The number of available questions is currently limited</li>
+                <li>Questions are being gradually added over time</li>
+                <li>Repetition may occur if you take multiple quizzes</li>
+                <li>Content is sourced from educational websites and study materials</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="bg-green-50 border-l-4 border-green-400 p-4 rounded-r-lg">
+            <div className="text-green-800">
+              <h3 className="font-semibold mb-2">How to Use This Platform</h3>
+              <ul className="list-disc list-inside space-y-1 text-sm">
+                <li>Use these quizzes to practice and reinforce your knowledge</li>
+                <li>Review explanations carefully to understand concepts</li>
+                <li>Supplement with official Cisco study materials</li>
+                <li>Track your progress to identify areas for improvement</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="flex flex-col sm:flex-row gap-3 pt-4">
+            <Button 
+              onClick={handleStartQuiz}
+              className="flex-1 bg-blue-600 hover:bg-blue-700 text-white"
+            >
+              <CheckCircle className="h-4 w-4 mr-2" />
+              I Understand - Start Quiz
+            </Button>
+            <Button 
+              variant="outline" 
+              onClick={onBackToHome}
+              className="flex-1"
+            >
+              Back to Home
+            </Button>
+          </div>
+        </CardContent>
+      </Card>
+    </div>
+  );
+
   if (loading) {
     return (
       <div className="min-h-screen bg-slate-50 flex items-center justify-center">
