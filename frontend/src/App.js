@@ -85,10 +85,26 @@ const LandingPage = ({ onStartQuiz, onViewProgress }) => {
                 Master CCNA with 
                 <span className="text-blue-600"> Interactive</span> Quizzes
               </h1>
-              <p className="text-xl text-slate-600 mb-8 leading-relaxed">
+              <p className="text-xl text-slate-600 mb-6 leading-relaxed">
                 Comprehensive practice questions covering OSI Model, Subnetting, Routing Protocols, 
                 and more. Track your progress and identify weak areas with our intelligent quiz system.
               </p>
+              
+              {/* Disclaimer on landing page */}
+              <div className="bg-amber-50 border border-amber-200 rounded-lg p-4 mb-8">
+                <div className="flex items-start space-x-3">
+                  <Badge variant="outline" className="bg-amber-100 text-amber-800 border-amber-300 mt-0.5">
+                    ⚠️ Note
+                  </Badge>
+                  <div className="text-sm text-amber-800">
+                    <p className="font-medium mb-1">Practice Questions Only</p>
+                    <p>
+                      Questions are sourced from educational resources like IPCisco.com for practice purposes. 
+                      This is not official Cisco exam content. Limited question bank - more content added regularly.
+                    </p>
+                  </div>
+                </div>
+              </div>
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <Button 
                   size="lg" 
