@@ -156,7 +156,7 @@ const LandingPage = ({ onStartQuiz, onViewProgress }) => {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-slate-900 mb-4">Why Choose NetworkPrep?</h2>
+            <h2 className="text-4xl font-bold text-slate-900 mb-4">Why Choose neTst?</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               Our platform is designed to help you master networking concepts through interactive learning
             </p>
