@@ -297,13 +297,13 @@ const QuizPage = ({ difficulty, onQuizComplete, onBackToHome }) => {
   }, [difficulty]);
 
   useEffect(() => {
-    if (timeLeft > 0 && !loading && quiz) {
+    if (timeLeft > 0 && !loading && quiz && !showDisclaimer) {
       const timer = setTimeout(() => setTimeLeft(timeLeft - 1), 1000);
       return () => clearTimeout(timer);
     } else if (timeLeft === 0) {
       handleSubmitQuiz();
     }
-  }, [timeLeft, loading, quiz]);
+  }, [timeLeft, loading, quiz, showDisclaimer]);
 
   const handleAnswerSelect = (answerIndex) => {
     setSelectedAnswer(answerIndex);
