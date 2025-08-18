@@ -283,7 +283,7 @@ const QuizPage = ({ difficulty, onQuizComplete, onBackToHome }) => {
       try {
         const response = await axios.post(`${API}/quiz/start`, {
           difficulty_level: difficulty,
-          question_count: 10
+          question_count: 5
         });
         setQuiz(response.data);
         setLoading(false);
