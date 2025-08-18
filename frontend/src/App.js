@@ -277,7 +277,7 @@ const LandingPage = ({ onStartQuiz, onViewProgress }) => {
               <span className="text-xl font-bold">neTst</span>
             </div>
             <p className="text-slate-400">
-              © 2024 NetworkPrep. Master networking with confidence.
+              © 2024 neTst. Master networking with confidence.
             </p>
           </div>
         </div>
