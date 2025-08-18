@@ -61,7 +61,7 @@ const LandingPage = ({ onStartQuiz, onViewProgress }) => {
               <div className="p-2 bg-blue-600 rounded-lg">
                 <Network className="h-6 w-6 text-white" />
               </div>
-              <h1 className="text-xl font-bold text-slate-900">NetworkPrep</h1>
+              <h1 className="text-xl font-bold text-slate-900">neTst</h1>
             </div>
             <nav className="flex items-center space-x-6">
               <Button variant="ghost" onClick={onViewProgress}>
